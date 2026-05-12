@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "titulo": "Hermano Francisco",
+    "autor": "Roberto Gómez Bolaños (Chespirito)",
+    "cuerda": "soprano",
+    "tonalidad": "Re Mayor",
+    "tipo": "entrada",
+    "duracion": 4
+  },
+  {
+    "id": 2,
+    "titulo": "Sublime humildad",
+    "autor": "Hermanas Clarisas",
+    "cuerda": "contralto",
+    "tonalidad": "Sol Mayor",
+    "tipo": "ofertorio",
+    "duracion": 3
+  },
+  {
+    "id": 3,
+    "titulo": "Sagrario de Dios",
+    "autor": "Federico Carranza",
+    "cuerda": "tenor",
+    "tonalidad": "La Mayor",
+    "tipo": "comunion",
+    "duracion": 5
+  },
+  {
+    "id": 4,
+    "titulo": "Mi cuerpo es comida",
+    "autor": "Cristóbal Fones",
+    "cuerda": "soprano",
+    "tonalidad": "Mi menor",
+    "tipo": "comunion",
+    "duracion": 4
+  },
+  {
+    "id": 5,
+    "titulo": "Que te alaben",
+    "autor": "Federico Carranza",
+    "cuerda": "todas",
+    "tonalidad": "Do Mayor",
+    "tipo": "entrada",
+    "duracion": 4
+  },
+  {
+    "id": 6,
+    "titulo": "Cántico",
+    "autor": "Fray Cesáreo Gabaráin",
+    "cuerda": "contralto",
+    "tonalidad": "Fa Mayor",
+    "tipo": "ofertorio",
+    "duracion": 4
+  },
+  {
+    "id": 7,
+    "titulo": "El buena gente",
+    "autor": "Jesús Vicente Morales Escala",
+    "cuerda": "bajo",
+    "tonalidad": "Sol Mayor",
+    "tipo": "salida",
+    "duracion": 3
+  }
+]
