@@ -9,7 +9,7 @@ const PUERTO = 3000;
 app.use(logger);
 
 app.use("/api/canciones", cancionesRouter);
-app.use("/", procesosRouter);
+app.use("/api", procesosRouter);
 
 app.listen(PUERTO, () => {
     console.log(`Servidor en http://localhost:${PUERTO}`);
