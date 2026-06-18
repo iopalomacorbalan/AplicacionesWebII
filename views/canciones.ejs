@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Canciones - Coro de los Capuchinos</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <%- include("partials/menu") %>
+
+    <main class="contenido">
+        <h1>Canciones del coro</h1>
+        <p>Listado de canciones disponibles. Hacé click en una para ver el detalle.</p>
+
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Tipo</th>
+                    <th>Duración</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% canciones.forEach(c => { %>
+                    <tr>
+                        <td><%= c.id %></td>
+                        <td><%= c.titulo %></td>
+                        <td><%= c.autor %></td>
+                        <td><%= c.tipo %></td>
+                        <td><%= c.duracion %> min</td>
+                        <td><a href="/canciones/detalle?id=<%= c.id %>">Ver detalle</a></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

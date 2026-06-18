@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Armar Misa - Coro de los Capuchinos</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <%- include("partials/menu") %>
+
+    <main class="contenido">
+        <h1>Armar Misa</h1>
+        <p class="explicacion">
+            Este procedimiento arma una lista de canciones para una misa, eligiendo
+            una de cada momento (entrada, ofertorio, comunión, salida) y completando
+            con otras canciones hasta acercarse a la duración objetivo (en minutos).
+        </p>
+
+        <form method="POST" action="/procedimiento" class="form-procedimiento">
+            <label>
+                Duración objetivo (minutos)
+                <input type="number" name="duracion" min="1" required value="20">
+            </label>
+            <button type="submit">Armar misa</button>
+        </form>
+
+        <% if (error) { %>
+            <div class="alerta error"><%= error %></div>
+        <% } %>
+
+        <% if (resultado) { %>
+            <div class="alerta exito">
+                ✓ Procedimiento ejecutado correctamente
+            </div>
+
+            <div class="resumen">
+                <p><strong>Duración objetivo:</strong> <%= resultado.duracionObjetivo %> min</p>
+                <p><strong>Duración total armada:</strong> <%= resultado.duracionTotal %> min</p>
+                <p><strong>Cantidad de canciones:</strong> <%= resultado.cantidad %></p>
+                <p><strong>Instrumentos necesarios:</strong> <%= resultado.instrumentosNecesarios.join(", ") %></p>
+            </div>
+
+            <h2 class="titulo-setlist">Setlist de la misa</h2>
+
+            <% const etiquetas = {
+                entrada: "Entrada",
+                ofertorio: "Ofertorio",
+                comunion: "Comunión",
+                salida: "Salida"
+            } %>
+
+            <% ["entrada", "ofertorio", "comunion", "salida"].forEach(momento => { %>
+                <section class="momento">
+                    <h3 class="momento-titulo"><%= etiquetas[momento] %></h3>
+                    <% if (resultado.cancionesPorMomento[momento].length === 0) { %>
+                        <p class="sin-canciones">No hay canciones para este momento.</p>
+                    <% } else { %>
+                        <% resultado.cancionesPorMomento[momento].forEach(c => { %>
+                            <div class="cancion-momento">
+                                <div class="cancion-titulo"><%= c.titulo %></div>
+                                <div class="cancion-datos">
+                                    <span><strong>Autor:</strong> <%= c.autor %></span>
+                                    <span><strong>Cuerda:</strong> <%= c.cuerda %></span>
+                                    <span><strong>Tonalidad:</strong> <%= c.tonalidad %></span>
+                                    <span><strong>Duración:</strong> <%= c.duracion %> min</span>
+                                    <span><strong>Instrumentos:</strong> <%= c.instrumentos.join(", ") %></span>
+                                </div>
+                            </div>
+                        <% }) %>
+                    <% } %>
+                </section>
+            <% }) %>
+        <% } %>
+    </main>
+</body>
+</html>

@@ -6,7 +6,8 @@
     "cuerda": "soprano",
     "tonalidad": "Re Mayor",
     "tipo": "entrada",
-    "duracion": 4
+    "duracion": 4,
+    "instrumentos": ["guitarra", "piano"]
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "cuerda": "contralto",
     "tonalidad": "Sol Mayor",
     "tipo": "ofertorio",
-    "duracion": 3
+    "duracion": 3,
+    "instrumentos": ["guitarra", "flauta"]
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "cuerda": "tenor",
     "tonalidad": "La Mayor",
     "tipo": "comunion",
-    "duracion": 5
+    "duracion": 5,
+    "instrumentos": ["piano", "violín"]
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "cuerda": "soprano",
     "tonalidad": "Mi menor",
     "tipo": "comunion",
-    "duracion": 4
+    "duracion": 4,
+    "instrumentos": ["guitarra", "piano", "flauta"]
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "cuerda": "todas",
     "tonalidad": "Do Mayor",
     "tipo": "entrada",
-    "duracion": 4
+    "duracion": 4,
+    "instrumentos": ["guitarra", "piano", "percusión"]
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "cuerda": "contralto",
     "tonalidad": "Fa Mayor",
     "tipo": "ofertorio",
-    "duracion": 4
+    "duracion": 4,
+    "instrumentos": ["guitarra", "órgano"]
   },
   {
     "id": 7,
@@ -60,6 +66,7 @@
     "cuerda": "bajo",
     "tonalidad": "Sol Mayor",
     "tipo": "salida",
-    "duracion": 3
+    "duracion": 3,
+    "instrumentos": ["guitarra", "piano", "percusión"]
   }
 ]

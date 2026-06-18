@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Coro de los Capuchinos</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body class="pagina-login">
+    <div class="caja-login">
+        <h1>Coro de los Capuchinos</h1>
+        <p class="subtitulo">Ingresá para administrar las canciones</p>
+
+        <% if (error) { %>
+            <div class="alerta error"><%= error %></div>
+        <% } %>
+
+        <form method="POST" action="/autenticar">
+            <label>
+                Usuario
+                <input type="text" name="usuario" required autofocus>
+            </label>
+            <label>
+                Contraseña
+                <input type="password" name="clave" required>
+            </label>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>

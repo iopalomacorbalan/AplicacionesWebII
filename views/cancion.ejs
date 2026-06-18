@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de canción - Coro de los Capuchinos</title>
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <%- include("partials/menu") %>
+
+    <main class="contenido">
+        <a href="/canciones" class="volver">← Volver al listado</a>
+
+        <% if (cancion) { %>
+            <h1><%= cancion.titulo %></h1>
+            <div class="ficha">
+                <p><strong>ID:</strong> <%= cancion.id %></p>
+                <p><strong>Autor:</strong> <%= cancion.autor %></p>
+                <p><strong>Cuerda:</strong> <%= cancion.cuerda %></p>
+                <p><strong>Tonalidad:</strong> <%= cancion.tonalidad %></p>
+                <p><strong>Tipo:</strong> <%= cancion.tipo %></p>
+                <p><strong>Duración:</strong> <%= cancion.duracion %> min</p>
+                <p><strong>Instrumentos:</strong> <%= cancion.instrumentos.join(", ") %></p>
+            </div>
+        <% } else { %>
+            <div class="alerta error">
+                No se encontró la canción con id <%= id %>.
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>

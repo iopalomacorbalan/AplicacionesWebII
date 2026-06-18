@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #eef3f9;
+    color: #2d2d2d;
+    line-height: 1.5;
+}
+
+.menu {
+    background: #1e4d8c;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-marca {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.menu a:hover {
+    opacity: 0.8;
+}
+
+.menu a.cerrar {
+    border: 1px solid white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+}
+
+.contenido {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.contenido h1 {
+    color: #1e4d8c;
+    margin-bottom: 0.5rem;
+}
+
+.contenido p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.tabla th, .tabla td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #d4dde8;
+}
+
+.tabla th {
+    background: #eef3f9;
+    color: #1e4d8c;
+    font-weight: 600;
+}
+
+.tabla tr:hover {
+    background: #f7faff;
+}
+
+.tabla a {
+    color: #1e4d8c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tabla a:hover {
+    text-decoration: underline;
+}
+
+.ficha {
+    background: #eef3f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.ficha p {
+    margin-bottom: 0.5rem;
+    color: #2d2d2d;
+}
+
+.volver {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #1e4d8c;
+    text-decoration: none;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+.alerta {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.alerta.error {
+    background: #fee;
+    color: #a00;
+    border: 1px solid #fcc;
+}
+
+.alerta.exito {
+    background: #e8f4fd;
+    color: #1e4d8c;
+    border: 1px solid #b8d4ee;
+}
+
+.explicacion {
+    background: #eef3f9;
+    padding: 1rem;
+    border-left: 4px solid #1e4d8c;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.form-procedimiento {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+.form-procedimiento label,
+.caja-login label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-procedimiento input,
+.caja-login input {
+    padding: 0.5rem;
+    border: 1px solid #b8c5d4;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-procedimiento input:focus,
+.caja-login input:focus {
+    outline: none;
+    border-color: #1e4d8c;
+    box-shadow: 0 0 0 3px rgba(30, 77, 140, 0.15);
+}
+
+.form-procedimiento button,
+.caja-login button {
+    background: #1e4d8c;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.form-procedimiento button:hover,
+.caja-login button:hover {
+    background: #2b5f96;
+}
+
+.resumen {
+    background: #eef3f9;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.resumen p {
+    margin-bottom: 0.3rem;
+}
+
+.titulo-setlist {
+    color: #1e4d8c;
+    margin: 1.5rem 0 1rem;
+    border-bottom: 2px solid #d4dde8;
+    padding-bottom: 0.5rem;
+}
+
+.momento {
+    background: #eef3f9;
+    border-left: 4px solid #1e4d8c;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.momento-titulo {
+    color: #1e4d8c;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.6rem;
+}
+
+.cancion-momento {
+    background: white;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.cancion-momento:last-child {
+    margin-bottom: 0;
+}
+
+.cancion-titulo {
+    font-weight: 600;
+    color: #2d2d2d;
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.cancion-datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.sin-canciones {
+    color: #888;
+    font-style: italic;
+    margin: 0;
+}
+
+.pagina-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e4d8c, #2b5f96);
+}
+
+.caja-login {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+.caja-login h1 {
+    color: #1e4d8c;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.caja-login .subtitulo {
+    text-align: center;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.caja-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.caja-login button {
+    margin-top: 0.5rem;
+}
